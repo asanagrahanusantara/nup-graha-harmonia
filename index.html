@@ -10,27 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --teal-green: #004d40;
-            --soft-gold: #D4AF37; /* Menggunakan emas yang lebih vibrant untuk kontras */
-            --beige: #F5F5DC;
-            --dark-slate: #2F4F4F;
+            --navy-blue: #001f3f;
+            --gold: #D4AF37;
+            --light-gold: #F7F2E0;
+            --off-white: #FDFDFD;
         }
-        body { font-family: 'Inter', sans-serif; background-color: var(--beige); color: var(--dark-slate); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--off-white); color: var(--navy-blue); }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 800; }
         .hero-bg {
-            background-image: linear-gradient(to top, rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.6)), url('images/Home page.png');
+            background-image: linear-gradient(to top, rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.5)), url('images/Home page.png');
             background-size: cover;
             background-position: center bottom;
         }
-        .btn-primary { background-color: var(--soft-gold); color: var(--teal-green); font-weight: 600; }
+        .btn-primary { background-color: var(--gold); color: var(--navy-blue); font-weight: 600; }
         .btn-primary:hover { background-color: #c5a230; }
-        .text-gold { color: var(--soft-gold); }
-        .bg-teal-green { background-color: var(--teal-green); }
-        .border-gold { border-color: var(--soft-gold); }
-        .focus\:ring-gold:focus { --tw-ring-color: var(--soft-gold); }
+        .text-gold { color: var(--gold); }
+        .bg-light-gold { background-color: var(--light-gold); }
+        .border-gold { border-color: var(--gold); }
+        .focus\:ring-gold:focus { --tw-ring-color: var(--gold); }
         .tab-button.active-tab {
-            color: var(--dark-slate);
-            border-bottom-color: var(--soft-gold);
+            color: var(--navy-blue);
+            border-bottom-color: var(--gold);
         }
         .modal-backdrop { transition: opacity 0.3s ease-in-out; }
         .modal-content { transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
@@ -47,11 +47,11 @@
 
     <!-- BAGIAN HEADER -->
     <header class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-32 md:py-48 text-center flex flex-col items-center">
+        <div class="container mx-auto px-6 py-24 md:py-48 text-center flex flex-col items-center">
             <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-16 mx-auto mb-8">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Sebuah Momen Langka, Sebuah Keputusan Abadi.</h1>
-            <p class="text-lg md:text-xl text-gray-200 mb-12 max-w-3xl readable-text">Ini bukan sekadar memilih rumah. Ini adalah momen saat Anda memutuskan untuk memberikan yang terbaik bagi masa depan. Graha Harmonia adalah kesempatan langka untuk memiliki hunian premium dengan nilai investasi yang cerdas. Sebuah privilese yang kini terbuka untuk Anda.</p>
-            <a href="#form-pemesanan" class="btn-primary py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+            <h1 class="text-3xl md:text-6xl font-extrabold leading-tight mb-4">Sebuah Momen Langka, Sebuah Keputusan Abadi.</h1>
+            <p class="text-base md:text-xl text-gray-200 mb-12 max-w-3xl readable-text">Ini bukan sekadar memilih rumah. Ini adalah momen saat Anda memutuskan untuk memberikan yang terbaik bagi masa depan. Graha Harmonia adalah kesempatan langka untuk memiliki hunian premium dengan nilai investasi yang cerdas. Sebuah privilese yang kini terbuka untuk Anda.</p>
+            <a href="#form-pemesanan" class="btn-primary font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg transition duration-300 transform hover:scale-105 shadow-xl">
                 Klaim Privilese Anda
             </a>
         </div>
@@ -59,7 +59,7 @@
 
     <main>
         <!-- BAGIAN FILOSOFI -->
-        <section class="py-20 bg-beige">
+        <section class="py-20 bg-off-white">
             <div class="container mx-auto px-6 text-center max-w-4xl">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Lebih dari Rumah, Ini Adalah <span class="text-gold">Pernyataan Visi Anda</span></h2>
                 <p class="text-lg text-gray-600 leading-relaxed readable-text">
@@ -69,27 +69,27 @@
         </section>
 
         <!-- === SEKSI MENGATASI KEKHAWATIRAN === -->
-        <section class="py-20 bg-teal-green text-white">
+        <section class="py-20 bg-navy-blue text-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Kami Merancang Ketenangan Pikiran Anda, Sejak Hari Pertama</h2>
-                    <p class="text-gray-200 mb-12 text-lg readable-text">Keputusan besar harus didasari oleh keyakinan penuh. Karena itu, kami menghilangkan semua keraguan dari persamaan ini.</p>
+                    <p class="text-gray-300 mb-12 text-lg readable-text">Keputusan besar harus didasari oleh keyakinan penuh. Karena itu, kami menghilangkan semua keraguan dari persamaan ini.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
                     <div class="bg-white/5 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
                         <h3 class="text-2xl font-bold mb-3 text-gold">Skema Pembayaran yang Mengikuti Rencana Anda</h3>
-                        <p class="text-gray-200 readable-text">Perjalanan finansial setiap orang itu unik. Kami tidak menawarkan solusi satu ukuran untuk semua. Sebaliknya, tim kami siap menjadi partner diskusi Anda untuk merancang skema pembayaran yang paling selaras dengan strategi keuangan Anda. Tujuannya satu: mewujudkan visi Anda, dengan cara Anda.</p>
+                        <p class="text-gray-300 readable-text">Perjalanan finansial setiap orang itu unik. Kami tidak menawarkan solusi satu ukuran untuk semua. Sebaliknya, tim kami siap menjadi partner diskusi Anda untuk merancang skema pembayaran yang paling selaras dengan strategi keuangan Anda. Tujuannya satu: mewujudkan visi Anda, dengan cara Anda.</p>
                     </div>
                     <div class="bg-white/5 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
                         <h3 class="text-2xl font-bold mb-3 text-gold">Sebuah Komitmen, Tanpa Risiko Sedikitpun</h3>
-                        <p class="text-gray-200 readable-text">Ambil langkah pertama ini dengan keyakinan mutlak. Jika karena alasan apapun rencana Anda berubah, dana NUP Anda kami jamin kembali 100%, utuh, tanpa syarat yang rumit. Rasa hormat kami terhadap keputusan Anda adalah prioritas.</p>
+                        <p class="text-gray-300 readable-text">Ambil langkah pertama ini dengan keyakinan mutlak. Jika karena alasan apapun rencana Anda berubah, dana NUP Anda kami jamin kembali 100%, utuh, tanpa syarat yang rumit. Rasa hormat kami terhadap keputusan Anda adalah prioritas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- BAGIAN DESAIN -->
-        <section id="project-design" class="py-20 bg-beige border-t border-b border-gray-200">
+        <section id="project-design" class="py-20 bg-light-gold">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Arsitektur yang Menenangkan Jiwa</h2>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="flex justify-center border-b border-gray-300 mb-10">
                     <button data-tab="fasad" class="tab-button active-tab py-4 px-8 text-lg font-semibold border-b-4">Fasad yang Ikonik</button>
-                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-dark-slate border-b-4 border-transparent">Denah yang Fungsional</button>
+                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-navy-blue border-b-4 border-transparent">Denah yang Fungsional</button>
                 </div>
                 <div>
                     <div id="fasad" class="tab-content">
@@ -138,17 +138,17 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Tiga Keuntungan Strategis yang Hanya Diketahui Pemegang NUP</h2>
                 <div class="grid md:grid-cols-3 gap-10">
                     <div class="text-center">
-                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">1</span></div>
+                        <div class="mx-auto bg-light-gold h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">1</span></div>
                         <h3 class="text-2xl font-bold mb-2">Privilese Memilih Pertama</h3>
                         <p class="text-gray-600 readable-text">Unit dengan posisi dan pemandangan terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum siapapun, bahkan sebelum pasar tahu.</p>
                     </div>
                     <div class="text-center">
-                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">2</span></div>
+                        <div class="mx-auto bg-light-gold h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">2</span></div>
                         <h3 class="text-2xl font-bold mb-2">Mengunci Nilai Investasi</h3>
                         <p class="text-gray-600 readable-text">Pasar properti selalu bergerak. Harga perdana ini adalah titik terendah yang pernah ada untuk prestise sekelas Graha Harmonia. Dengan NUP, Anda tidak hanya membeli rumah, Anda mengunci keuntungan masa depan, hari ini.</p>
                     </div>
                     <div class="text-center">
-                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">3</span></div>
+                        <div class="mx-auto bg-light-gold h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">3</span></div>
                         <h3 class="text-2xl font-bold mb-2">Bergabung dalam Lingkaran Visioner</h3>
                         <p class="text-gray-600 readable-text">Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas. Bonus tambahan adalah cara kami menghargai visi Anda.</p>
                     </div>
@@ -157,7 +157,7 @@
         </section>
 
         <!-- BAGIAN FORM -->
-        <section id="form-pemesanan" class="bg-beige pt-20 pb-20">
+        <section id="form-pemesanan" class="bg-light-gold py-20">
             <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl max-w-3xl mx-auto border-t-8 border-gold">
                 <h2 class="text-3xl font-bold text-center mb-4">Langkah Terakhir Menuju Keputusan Terbaik Anda</h2>
                 <p class="text-center text-gray-600 mb-10 readable-text">Momen seperti ini tidak bertahan lama. Jangan biarkan penundaan menghalangi masa depan yang seharusnya menjadi milik Anda. Amankan privilese Anda sekarang.</p>
@@ -172,7 +172,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-teal-green text-white mt-24">
+    <footer class="bg-navy-blue text-white mt-24">
         <div class="container mx-auto px-6 py-10 text-center"><p class="text-white">&copy; 2025 PT. Asana Graha Nusantara</p><p class="text-sm text-gray-300 mt-2 readable-text">Menciptakan Ruang untuk Kehidupan Harmonis di Tabanan, Bali</p></div>
     </footer>
 
