@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graha Harmonia - Temukan Aliran Harmoni Anda di Tabanan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --misty-blue: #A7C7E7;
+            --stone-grey: #848482;
+            --deep-teal: #003333;
+            --soft-white: #F8F8F8;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--soft-white); color: var(--deep-teal); }
+        h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; font-weight: 700; }
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(0, 51, 51, 0.7), rgba(0, 51, 51, 0.3)), url('images/Home page.png');
+            background-size: cover;
+            background-position: center bottom;
+        }
+        .btn-primary { background-color: var(--deep-teal); color: white; }
+        .btn-primary:hover { background-color: #004d4d; }
+        .text-misty-blue { color: var(--misty-blue); }
+        .bg-misty-blue-light { background-color: #eaf2fa; }
+        .border-misty-blue { border-color: var(--misty-blue); }
+        .focus\:ring-misty-blue:focus { --tw-ring-color: var(--misty-blue); }
+        .tab-button.active-tab {
+            color: var(--deep-teal);
+            border-bottom-color: var(--misty-blue);
+        }
+        .modal-backdrop { transition: opacity 0.3s ease-in-out; }
+        .modal-content { transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+        .modal-scrollable { overflow-y: auto; max-height: 90vh; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- BAGIAN HEADER -->
+    <header class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-32 md:py-48 text-center flex flex-col items-center">
+            <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-12 mx-auto mb-8 brightness-0 invert">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Temukan Aliran Harmoni Anda</h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-12 max-w-3xl font-light">Di tepi sungai yang jernih, kami tidak hanya membangun rumah. Kami menciptakan sebuah oase di mana ketenangan alam dan kehangatan keluarga bertemu dalam satu aliran yang menyejukkan.</p>
+            <a href="#form-pemesanan" class="btn-primary font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+                Amankan Posisi Anda
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BAGIAN FILOSOFI -->
+        <section class="py-20 bg-soft-white">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Sebuah <span class="text-stone-grey">Rumah</span> yang Mengalir dengan Kehidupan</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Graha Harmonia adalah jawaban bagi jiwa yang mendambakan keseimbangan. Dirancang dengan kelembutan dan presisi, setiap unit adalah ruang pribadi untuk Anda bernapas, bertumbuh, dan merayakan setiap momen berharga—sebuah prestise yang terasa menenangkan dan abadi.
+                </p>
+            </div>
+        </section>
+
+        <!-- === SEKSI MENGATASI KEKHAWATIRAN === -->
+        <section class="py-20 bg-deep-teal text-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Jalan yang Jernih Menuju Rumah Impian</h2>
+                    <p class="text-gray-300 mb-12 text-lg font-light">Kami percaya, ketenangan pikiran Anda adalah fondasi utama. Oleh karena itu, kami hadirkan proses kepemilikan yang transparan dan fleksibel.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-3 text-misty-blue">Skema Pembayaran yang Mengerti Anda</h3>
+                        <p class="text-gray-300 font-light">Setiap perjalanan finansial itu unik. Tim kami siap berdiskusi untuk menemukan skema pembayaran yang paling selaras dengan rencana Anda, baik melalui KPR maupun opsi lainnya. Impian Anda adalah tujuan kita bersama.</p>
+                    </div>
+                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-3 text-misty-blue">Komitmen Tanpa Risiko: Jaminan Refund 100%</h3>
+                        <p class="text-gray-300 font-light">Ambil langkah pertama dengan keyakinan penuh. Jika rencana Anda berubah, dana NUP Anda kami jamin kembali 100%, utuh, tanpa pertanyaan rumit. Keputusan Anda adalah kehormatan bagi kami.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN DESAIN -->
+        <section id="project-design" class="py-20 bg-misty-blue-light">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Arsitektur yang Menenangkan Jiwa</h2>
+                    <p class="text-gray-700 mb-12">Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal.</p>
+                </div>
+                <div class="flex justify-center border-b border-gray-300 mb-10">
+                    <button data-tab="fasad" class="tab-button active-tab py-4 px-8 text-lg font-semibold border-b-4">Fasad yang Ikonik</button>
+                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-deep-teal border-b-4 border-transparent">Denah yang Fungsional</button>
+                </div>
+                <div>
+                    <div id="fasad" class="tab-content">
+                        <div class="grid md:grid-cols-2 gap-10 items-center">
+                            <div class="text-center">
+                                <img src="images/Tampak Lt1.png" alt="Fasad Graha Harmonia 1 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
+                                <h4 class="font-semibold text-xl mt-4">Desain 1 Lantai</h4>
+                                <p class="text-gray-600">Keanggunan yang menyatu dengan alam sekitar.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Tampak Lt2.png" alt="Fasad Graha Harmonia 2 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
+                                <h4 class="font-semibold text-xl mt-4">Desain 2 Lantai</h4>
+                                <p class="text-gray-600">Kenyamanan vertikal untuk keluarga yang dinamis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="denah" class="tab-content hidden">
+                         <div class="grid md:grid-cols-2 gap-10 items-center">
+                            <div class="text-center">
+                                <img src="images/graha.jpeg" alt="Denah Tipe Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
+                                <h4 class="font-semibold text-xl mt-4">Denah Tipe Unit</h4>
+                                <p class="text-gray-600">Tata ruang cerdas untuk kehidupan berkualitas.</p>
+                            </div>
+                            <div class="text-center">
+                                <img src="images/Siteplan GrahaHarmonia.png" alt="Site Plan Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
+                                <h4 class="font-semibold text-xl mt-4">Master Plan</h4>
+                                <p class="text-gray-600">Lingkungan terencana untuk komunitas yang nyaman.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN KEUNTUNGAN NUP -->
+         <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Alasan Mengapa Anda Harus Bertindak Sekarang</h2>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <div class="text-center">
+                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">1</span></div>
+                        <h3 class="text-2xl font-bold mb-2">Hak Istimewa Memilih Pertama</h3>
+                        <p class="text-gray-700">Unit dengan posisi dan pemandangan terbaik adalah yang paling langka. NUP adalah kunci Anda untuk mendapatkannya sebelum dilihat orang lain.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">2</span></div>
+                        <h3 class="text-2xl font-bold mb-2">Mengunci Harga Terbaik</h3>
+                        <p class="text-gray-700">Harga properti terus bergerak naik. Harga perdana saat ini adalah penawaran terendah yang pernah ada. NUP mengamankan keuntungan investasi Anda sejak hari pertama.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">3</span></div>
+                        <h3 class="text-2xl font-bold mb-2">Menjadi Bagian dari Visi</h3>
+                        <p class="text-gray-700">Memiliki NUP Graha Harmonia adalah sebuah pernyataan visi. Anda bergabung dengan lingkaran eksklusif yang menghargai kualitas dan keputusan cerdas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN FORM -->
+        <section id="form-pemesanan" class="bg-misty-blue-light py-20">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl max-w-3xl mx-auto border-t-8 border-misty-blue">
+                <h2 class="text-3xl font-bold text-center mb-4">Pintu Menuju Kesempatan Anda</h2>
+                <p class="text-center text-gray-600 mb-10">Kesempatan langka ini bersifat sementara. Amankan NUP Anda sekarang. Sebuah langkah tanpa risiko (100% refundable) menuju keputusan terbaik dalam hidup Anda.</p>
+                <form id="nupForm" action="https://formspree.io/f/mnnbpaoa" method="POST">
+                    <div class="mb-6"><label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap</label><input type="text" id="fullName" name="Nama Lengkap" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="Nama Anda" required></div>
+                    <div class="mb-6"><label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp</label><input type="tel" id="whatsapp" name="Nomor WhatsApp" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="0812..." required></div>
+                    <div class="mb-8"><label for="email" class="block text-gray-700 text-sm font-bold mb-2">Alamat Email</label><input type="email" id="email" name="Email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="email@anda.com" required></div>
+                    <div class="text-center"><button type="submit" id="submitButton" class="w-full btn-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Amankan Posisi Saya Sekarang</button></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-deep-teal text-white mt-24">
+        <div class="container mx-auto px-6 py-10 text-center"><p class="text-gray-300">&copy; 2025 PT. Asana Graha Nusantara</p><p class="text-sm text-gray-400 mt-2 font-light">Menciptakan Ruang untuk Kehidupan Harmonis di Tabanan, Bali</p></div>
+    </footer>
+
+    <!-- MODAL POP-UP -->
+    <div id="thankYouModal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div class="modal-content modal-scrollable bg-white max-w-2xl w-full p-8 md:p-10 rounded-2xl shadow-2xl text-center border-t-8 border-misty-blue transform scale-95 opacity-0">
+            <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-10 mx-auto mb-6">
+            <div class="mx-auto bg-green-100 rounded-full h-20 w-20 flex items-center justify-center mb-5"><svg class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
+            <h1 class="text-3xl font-bold mb-3">Terima Kasih!</h1>
+            <p class="text-gray-600 mb-8 text-lg">Anda selangkah lebih dekat. Segera amankan posisi prioritas Anda.</p>
+            <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-left mb-8">
+                <h2 class="text-xl font-bold mb-4">Langkah Berikutnya: Pembayaran NUP</h2>
+                <p class="text-gray-600 mb-6">Silakan lakukan pembayaran Booking Fee NUP sebesar <strong>Rp 5.000.000,-</strong> ke rekening resmi kami:</p>
+                <div class="space-y-3 text-sm">
+                    <div class="flex justify-between"><span class="text-gray-500">Bank:</span><span class="font-semibold">Bank Mandiri</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500">Atas Nama:</span><span class="font-semibold">PT Asana Graha Nusantara</span></div>
+                    <div class="flex justify-between items-center"><span class="text-gray-500">No. Rekening:</span><span id="accountNumber" class="font-bold text-lg tracking-wider">1750004137419</span></div>
+                </div>
+                <button id="copyButton" class="mt-6 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-4 rounded-lg text-sm transition duration-300">Salin Nomor Rekening</button>
+            </div>
+            <div class="text-left bg-blue-50 border-l-4 border-blue-400 p-4 rounded-md mb-8">
+                <h3 class="font-bold text-blue-800">Penting: Konfirmasi Pembayaran</h3>
+                <p class="text-sm text-blue-700 mt-1">Setelah transfer, mohon kirimkan bukti pembayaran melalui WhatsApp agar NUP Anda dapat segera kami proses.</p>
+                 <a href="https://wa.me/6285711880101?text=Halo,%20saya%20telah%20mendaftar%20NUP%20Graha%20Harmonia%20dan%20ingin%20mengonfirmasi%20pembayaran." target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full text-sm">Konfirmasi via WhatsApp</a>
+            </div>
+            <button id="closeModalButton" class="text-gray-500 hover:text-deep-teal font-semibold">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('nupForm');
+        const modal = document.getElementById('thankYouModal');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        const modalContent = document.querySelector('.modal-content');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const submitButton = document.getElementById('submitButton');
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const originalButtonText = submitButton.innerHTML;
+            submitButton.innerHTML = 'Mengirim...';
+            submitButton.disabled = true;
+
+            const data = new FormData(event.target);
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    showModal();
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            alert(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            alert('Oops! Terjadi masalah saat mengirim form.');
+                        }
+                    });
+                }
+            } catch (error) {
+                alert('Oops! Terjadi masalah koneksi.');
+            } finally {
+                submitButton.innerHTML = originalButtonText;
+                submitButton.disabled = false;
+            }
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        function showModal() {
+            modal.classList.remove('pointer-events-none');
+            modalBackdrop.classList.remove('opacity-0');
+            modalContent.classList.remove('opacity-0', 'scale-95');
+        }
+
+        function hideModal() {
+            modalBackdrop.classList.add('opacity-0');
+            modalContent.classList.add('opacity-0', 'scale-95');
+            setTimeout(() => {
+                modal.classList.add('pointer-events-none');
+            }, 300);
+        }
+
+        closeModalButton.addEventListener('click', hideModal);
+        modalBackdrop.addEventListener('click', (event) => {
+            if (event.target === modalBackdrop) {
+                hideModal();
+            }
+        });
+        
+        const copyButton = document.getElementById('copyButton');
+        const accountNumber = document.getElementById('accountNumber');
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(accountNumber.textContent).then(() => {
+                copyButton.textContent = 'Berhasil Disalin!';
+                setTimeout(() => { copyButton.textContent = 'Salin Nomor Rekening'; }, 2000);
+            }).catch(err => console.error('Gagal menyalin', err));
+        });
+
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active-tab');
+                    btn.classList.add('text-gray-500', 'hover:text-deep-teal', 'border-transparent');
+                });
+                button.classList.add('active-tab');
+                button.classList.remove('text-gray-500', 'hover:text-deep-teal', 'border-transparent');
+
+                tabContents.forEach(content => {
+                    if (content.id === tabId) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
