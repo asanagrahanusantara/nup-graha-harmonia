@@ -7,30 +7,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --misty-blue: #A7C7E7;
-            --stone-grey: #6c757d;
-            --deep-teal: #003333;
-            --soft-white: #F8F8F8;
+            --teal-green: #004d40;
+            --soft-gold: #D4AF37; /* Menggunakan emas yang lebih vibrant untuk kontras */
+            --beige: #F5F5DC;
+            --dark-slate: #2F4F4F;
         }
-        body { font-family: 'Inter', sans-serif; background-color: var(--soft-white); color: var(--deep-teal); }
-        h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; font-weight: 800; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--beige); color: var(--dark-slate); }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 800; }
         .hero-bg {
-            background-image: linear-gradient(to top, rgba(0, 51, 51, 0.75), rgba(0, 51, 51, 0.4)), url('images/Home page.png');
+            background-image: linear-gradient(to top, rgba(0, 77, 64, 0.85), rgba(0, 77, 64, 0.6)), url('images/Home page.png');
             background-size: cover;
             background-position: center bottom;
         }
-        .btn-primary { background-color: var(--deep-teal); color: white; }
-        .btn-primary:hover { background-color: #004d4d; }
-        .text-misty-blue { color: var(--misty-blue); }
-        .bg-misty-blue-light { background-color: #eaf2fa; }
-        .border-misty-blue { border-color: var(--misty-blue); }
-        .focus\:ring-misty-blue:focus { --tw-ring-color: var(--misty-blue); }
+        .btn-primary { background-color: var(--soft-gold); color: var(--teal-green); font-weight: 600; }
+        .btn-primary:hover { background-color: #c5a230; }
+        .text-gold { color: var(--soft-gold); }
+        .bg-teal-green { background-color: var(--teal-green); }
+        .border-gold { border-color: var(--soft-gold); }
+        .focus\:ring-gold:focus { --tw-ring-color: var(--soft-gold); }
         .tab-button.active-tab {
-            color: var(--deep-teal);
-            border-bottom-color: var(--misty-blue);
+            color: var(--dark-slate);
+            border-bottom-color: var(--soft-gold);
         }
         .modal-backdrop { transition: opacity 0.3s ease-in-out; }
         .modal-content { transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; }
@@ -39,7 +39,7 @@
             max-height: calc(100vh - 4rem); 
         }
         .readable-text {
-            font-weight: 500; /* Medium weight */
+            font-weight: 500;
         }
     </style>
 </head>
@@ -48,10 +48,10 @@
     <!-- BAGIAN HEADER -->
     <header class="hero-bg text-white">
         <div class="container mx-auto px-6 py-32 md:py-48 text-center flex flex-col items-center">
-            <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-12 mx-auto mb-8 brightness-0 invert">
+            <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-16 mx-auto mb-8">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Sebuah Momen Langka, Sebuah Keputusan Abadi.</h1>
-            <p class="text-lg md:text-xl text-gray-100 mb-12 max-w-3xl readable-text">Ini bukan sekadar memilih rumah. Ini adalah momen saat Anda memutuskan untuk memberikan yang terbaik bagi masa depan. Graha Harmonia adalah kesempatan langka untuk memiliki hunian premium dengan nilai investasi yang cerdas. Sebuah privilese yang kini terbuka untuk Anda.</p>
-            <a href="#form-pemesanan" class="btn-primary font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+            <p class="text-lg md:text-xl text-gray-200 mb-12 max-w-3xl readable-text">Ini bukan sekadar memilih rumah. Ini adalah momen saat Anda memutuskan untuk memberikan yang terbaik bagi masa depan. Graha Harmonia adalah kesempatan langka untuk memiliki hunian premium dengan nilai investasi yang cerdas. Sebuah privilese yang kini terbuka untuk Anda.</p>
+            <a href="#form-pemesanan" class="btn-primary py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
                 Klaim Privilese Anda
             </a>
         </div>
@@ -59,45 +59,45 @@
 
     <main>
         <!-- BAGIAN FILOSOFI -->
-        <section class="py-20 bg-soft-white">
+        <section class="py-20 bg-beige">
             <div class="container mx-auto px-6 text-center max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Lebih dari Rumah, Ini Adalah <span class="text-stone-grey">Pernyataan Visi Anda</span></h2>
-                <p class="text-lg text-gray-700 leading-relaxed readable-text">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Lebih dari Rumah, Ini Adalah <span class="text-gold">Pernyataan Visi Anda</span></h2>
+                <p class="text-lg text-gray-600 leading-relaxed readable-text">
                     Bagi Anda yang visioner, sebuah rumah adalah cerminan dari standar dan pencapaian. Graha Harmonia dirancang bukan sebagai pilihan, melainkan sebagai penegasan—bahwa kualitas premium, ketenangan sejati, dan investasi cerdas dapat diraih dalam satu keputusan. Inilah panggung di mana Anda merayakan kesuksesan hari ini dan membangun warisan untuk esok.
                 </p>
             </div>
         </section>
 
-        <!-- === SEKSI MENGATASI KEKHAWATIRAN (DENGAN PERBAIKAN KONTRAS) === -->
-        <section class="py-20 bg-deep-teal text-white">
+        <!-- === SEKSI MENGATASI KEKHAWATIRAN === -->
+        <section class="py-20 bg-teal-green text-white">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Kami Merancang Ketenangan Pikiran Anda, Sejak Hari Pertama</h2>
-                    <p class="text-gold mb-12 text-lg readable-text">Keputusan besar harus didasari oleh keyakinan penuh. Karena itu, kami menghilangkan semua keraguan dari persamaan ini.</p>
+                    <p class="text-gray-200 mb-12 text-lg readable-text">Keputusan besar harus didasari oleh keyakinan penuh. Karena itu, kami menghilangkan semua keraguan dari persamaan ini.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                    <div class="bg-slate-800 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold mb-3 text-misty-blue">Skema Pembayaran yang Mengikuti Rencana Anda</h3>
-                        <p class="text-white readable-text">Perjalanan finansial setiap orang itu unik. Kami tidak menawarkan solusi satu ukuran untuk semua. Sebaliknya, tim kami siap menjadi partner diskusi Anda untuk merancang skema pembayaran yang paling selaras dengan strategi keuangan Anda. Tujuannya satu: mewujudkan visi Anda, dengan cara Anda.</p>
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-3 text-gold">Skema Pembayaran yang Mengikuti Rencana Anda</h3>
+                        <p class="text-gray-200 readable-text">Perjalanan finansial setiap orang itu unik. Kami tidak menawarkan solusi satu ukuran untuk semua. Sebaliknya, tim kami siap menjadi partner diskusi Anda untuk merancang skema pembayaran yang paling selaras dengan strategi keuangan Anda. Tujuannya satu: mewujudkan visi Anda, dengan cara Anda.</p>
                     </div>
-                    <div class="bg-slate-800 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold mb-3 text-misty-blue">Sebuah Komitmen, Tanpa Risiko Sedikitpun</h3>
-                        <p class="text-white readable-text">Ambil langkah pertama ini dengan keyakinan mutlak. Jika karena alasan apapun rencana Anda berubah, dana NUP Anda kami jamin kembali 100%, utuh, tanpa syarat yang rumit. Rasa hormat kami terhadap keputusan Anda adalah prioritas.</p>
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/20 backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-3 text-gold">Sebuah Komitmen, Tanpa Risiko Sedikitpun</h3>
+                        <p class="text-gray-200 readable-text">Ambil langkah pertama ini dengan keyakinan mutlak. Jika karena alasan apapun rencana Anda berubah, dana NUP Anda kami jamin kembali 100%, utuh, tanpa syarat yang rumit. Rasa hormat kami terhadap keputusan Anda adalah prioritas.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- BAGIAN DESAIN -->
-        <section id="project-design" class="py-20 bg-misty-blue-light">
+        <section id="project-design" class="py-20 bg-beige border-t border-b border-gray-200">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Arsitektur yang Menenangkan Jiwa</h2>
-                    <p class="text-gray-700 mb-12 readable-text">Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal.</p>
+                    <p class="text-gray-600 mb-12 readable-text">Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal.</p>
                 </div>
                 <div class="flex justify-center border-b border-gray-300 mb-10">
                     <button data-tab="fasad" class="tab-button active-tab py-4 px-8 text-lg font-semibold border-b-4">Fasad yang Ikonik</button>
-                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-deep-teal border-b-4 border-transparent">Denah yang Fungsional</button>
+                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-dark-slate border-b-4 border-transparent">Denah yang Fungsional</button>
                 </div>
                 <div>
                     <div id="fasad" class="tab-content">
@@ -138,47 +138,47 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Tiga Keuntungan Strategis yang Hanya Diketahui Pemegang NUP</h2>
                 <div class="grid md:grid-cols-3 gap-10">
                     <div class="text-center">
-                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">1</span></div>
+                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">1</span></div>
                         <h3 class="text-2xl font-bold mb-2">Privilese Memilih Pertama</h3>
-                        <p class="text-gray-700 readable-text">Unit dengan posisi dan pemandangan terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum siapapun, bahkan sebelum pasar tahu.</p>
+                        <p class="text-gray-600 readable-text">Unit dengan posisi dan pemandangan terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum siapapun, bahkan sebelum pasar tahu.</p>
                     </div>
                     <div class="text-center">
-                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">2</span></div>
+                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">2</span></div>
                         <h3 class="text-2xl font-bold mb-2">Mengunci Nilai Investasi</h3>
-                        <p class="text-gray-700 readable-text">Pasar properti selalu bergerak. Harga perdana ini adalah titik terendah yang pernah ada untuk prestise sekelas Graha Harmonia. Dengan NUP, Anda tidak hanya membeli rumah, Anda mengunci keuntungan masa depan, hari ini.</p>
+                        <p class="text-gray-600 readable-text">Pasar properti selalu bergerak. Harga perdana ini adalah titik terendah yang pernah ada untuk prestise sekelas Graha Harmonia. Dengan NUP, Anda tidak hanya membeli rumah, Anda mengunci keuntungan masa depan, hari ini.</p>
                     </div>
                     <div class="text-center">
-                        <div class="mx-auto bg-misty-blue-light h-20 w-20 rounded-full flex items-center justify-center mb-4"><span class="text-3xl font-bold text-deep-teal">3</span></div>
+                        <div class="mx-auto bg-beige h-20 w-20 rounded-full flex items-center justify-center mb-4 border border-gray-200"><span class="text-3xl font-bold text-gold">3</span></div>
                         <h3 class="text-2xl font-bold mb-2">Bergabung dalam Lingkaran Visioner</h3>
-                        <p class="text-gray-700 readable-text">Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas. Bonus tambahan adalah cara kami menghargai visi Anda.</p>
+                        <p class="text-gray-600 readable-text">Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas. Bonus tambahan adalah cara kami menghargai visi Anda.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- BAGIAN FORM -->
-        <section id="form-pemesanan" class="bg-misty-blue-light py-20">
-            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl max-w-3xl mx-auto border-t-8 border-misty-blue">
+        <section id="form-pemesanan" class="bg-beige pt-20 pb-20">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl max-w-3xl mx-auto border-t-8 border-gold">
                 <h2 class="text-3xl font-bold text-center mb-4">Langkah Terakhir Menuju Keputusan Terbaik Anda</h2>
                 <p class="text-center text-gray-600 mb-10 readable-text">Momen seperti ini tidak bertahan lama. Jangan biarkan penundaan menghalangi masa depan yang seharusnya menjadi milik Anda. Amankan privilese Anda sekarang.</p>
                 <form id="nupForm" action="https://formspree.io/f/mnnbpaoa" method="POST">
-                    <div class="mb-6"><label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap</label><input type="text" id="fullName" name="Nama Lengkap" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="Nama Anda" required></div>
-                    <div class="mb-6"><label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp</label><input type="tel" id="whatsapp" name="Nomor WhatsApp" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="0812..." required></div>
-                    <div class="mb-8"><label for="email" class="block text-gray-700 text-sm font-bold mb-2">Alamat Email</label><input type="email" id="email" name="Email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-misty-blue" placeholder="email@anda.com" required></div>
-                    <div class="text-center"><button type="submit" id="submitButton" class="w-full btn-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Pesan Sekarang</button></div>
+                    <div class="mb-6"><label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap</label><input type="text" id="fullName" name="Nama Lengkap" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Nama Anda" required></div>
+                    <div class="mb-6"><label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp</label><input type="tel" id="whatsapp" name="Nomor WhatsApp" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="0812..." required></div>
+                    <div class="mb-8"><label for="email" class="block text-gray-700 text-sm font-bold mb-2">Alamat Email</label><input type="email" id="email" name="Email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="email@anda.com" required></div>
+                    <div class="text-center"><button type="submit" id="submitButton" class="w-full btn-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Klaim Privilese Saya</button></div>
                 </form>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer class="bg-deep-teal text-white mt-24">
+    <footer class="bg-teal-green text-white mt-24">
         <div class="container mx-auto px-6 py-10 text-center"><p class="text-white">&copy; 2025 PT. Asana Graha Nusantara</p><p class="text-sm text-gray-300 mt-2 readable-text">Menciptakan Ruang untuk Kehidupan Harmonis di Tabanan, Bali</p></div>
     </footer>
 
     <!-- MODAL POP-UP -->
     <div id="thankYouModal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 opacity-0 pointer-events-none">
-        <div class="modal-content modal-scrollable bg-white max-w-2xl w-full p-8 md:p-10 rounded-2xl shadow-2xl text-center border-t-8 border-misty-blue transform scale-95 opacity-0">
+        <div class="modal-content modal-scrollable bg-white max-w-2xl w-full p-8 md:p-10 rounded-2xl shadow-2xl text-center border-t-8 border-gold transform scale-95 opacity-0">
             <img src="images/ASANA Blue Gold.png" alt="Logo Asana Graha Nusantara" class="h-10 mx-auto mb-6">
             <div class="mx-auto bg-green-100 rounded-full h-20 w-20 flex items-center justify-center mb-5"><svg class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
             <h1 class="text-3xl font-bold mb-3">Terima Kasih!</h1>
@@ -198,7 +198,7 @@
                 <p class="text-sm text-blue-700 mt-1 readable-text">Setelah transfer, mohon kirimkan bukti pembayaran melalui WhatsApp agar NUP Anda dapat segera kami proses.</p>
                  <a href="https://wa.me/6285711880101?text=Halo,%20saya%20telah%20mendaftar%20NUP%20Graha%20Harmonia%20dan%20ingin%20mengonfirmasi%20pembayaran." target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full text-sm">Konfirmasi via WhatsApp</a>
             </div>
-            <button id="closeModalButton" class="text-gray-500 hover:text-deep-teal font-semibold">Tutup</button>
+            <button id="closeModalButton" class="text-gray-500 hover:text-navy-blue font-semibold">Tutup</button>
         </div>
     </div>
 
@@ -284,10 +284,10 @@
 
                 tabButtons.forEach(btn => {
                     btn.classList.remove('active-tab');
-                    btn.classList.add('text-gray-500', 'hover:text-deep-teal', 'border-transparent');
+                    btn.classList.add('text-gray-500', 'hover:text-navy-blue', 'border-transparent');
                 });
                 button.classList.add('active-tab');
-                button.classList.remove('text-gray-500', 'hover:text-deep-teal', 'border-transparent');
+                button.classList.remove('text-gray-500', 'hover:text-navy-blue', 'border-transparent');
 
                 tabContents.forEach(content => {
                     if (content.id === tabId) {
