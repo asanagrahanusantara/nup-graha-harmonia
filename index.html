@@ -43,21 +43,31 @@
         .readable-text {
             font-weight: 500;
         }
+        .lang-btn.active-lang {
+            font-weight: 800;
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- BAGIAN HEADER (DENGAN PERBAIKAN RESPONSIVE FINAL) -->
-<header class="hero-bg text-white">
-    <div class="container mx-auto px-6 py-24 md:py-40 text-center flex flex-col items-center">
-        <img src="images/Logo asana 1.png" alt="Logo Asana Graha Nusantara" class="h-12 md:h-16 mx-auto mb-8 opacity-95">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4">Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR.</h1>
-        <p class="text-base md:text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl readable-text">Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan.</p>
-        <a href="#consultation" class="btn-primary font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg transition duration-300 transform hover:scale-105 shadow-xl">
-            Wujudkan Impian Anda
-        </a>
-    </div>
-</header>
+    <header class="hero-bg text-white relative">
+        <!-- TOMBOL BAHASA -->
+        <div class="absolute top-4 right-4 md:top-6 md:right-8 z-10">
+            <button id="lang-id" class="lang-btn px-2 py-1 text-sm text-white font-semibold">ID</button>
+            <span class="text-white opacity-50">|</span>
+            <button id="lang-en" class="lang-btn px-2 py-1 text-sm text-gray-300 font-semibold">EN</button>
+        </div>
+
+        <div class="container mx-auto px-6 py-24 md:py-40 text-center flex flex-col items-center">
+            <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" class="h-16 md:h-20 mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-lang-id="Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR." data-lang-en="Imagine Owning a Villa in Bali, with a Mortgage Equal to the Minimum Wage.">Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR.</h1>
+            <p class="text-base md:text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl readable-text" data-lang-id="Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan." data-lang-en="At Graha Harmonia, we break the boundaries. We believe that the luxury, tranquility, and prestige of a villa are not exclusive rights, but a smart dream that you can now realize.">Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan.</p>
+            <a href="#consultation" class="btn-primary font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg transition duration-300 transform hover:scale-105 shadow-xl" data-lang-id="Wujudkan Impian Anda" data-lang-en="Realize Your Dream">
+                Wujudkan Impian Anda
             </a>
         </div>
     </header>
@@ -66,50 +76,52 @@
         <!-- BAGIAN FILOSOFI -->
         <section class="py-20 bg-off-white">
             <div class="container mx-auto px-6 text-center max-w-4xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">Lebih dari Rumah, Ini Adalah <span class="text-gold">Peningkatan Kualitas Hidup</span></h2>
-                <p class="text-lg text-gray-600 leading-relaxed readable-text">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6" data-lang-id="Lebih dari Rumah, Ini Adalah <span class='text-gold'>Peningkatan Kualitas Hidup</span>" data-lang-en="More than a House, It's an <span class='text-gold'>Upgrade in Your Quality of Life</span>">Lebih dari Rumah, Ini Adalah <span class="text-gold">Peningkatan Kualitas Hidup</span></h2>
+                <p class="text-lg text-gray-600 leading-relaxed readable-text" data-lang-id="Bagi Anda yang visioner, sebuah rumah adalah cerminan dari standar dan pencapaian. Graha Harmonia dirancang bukan sebagai pilihan, melainkan sebagai penegasan—bahwa kualitas premium, ketenangan sejati, dan investasi cerdas dapat diraih dalam satu keputusan. Inilah panggung di mana Anda merayakan kesuksesan hari ini dan membangun warisan untuk esok." data-lang-en="For the visionary, a home is a reflection of standards and achievements. Graha Harmonia is designed not as an option, but as an affirmation—that premium quality, true tranquility, and smart investment can be achieved in one decision. This is the stage where you celebrate today's success and build a legacy for tomorrow.">
                     Bagi Anda yang visioner, sebuah rumah adalah cerminan dari standar dan pencapaian. Graha Harmonia dirancang bukan sebagai pilihan, melainkan sebagai penegasan—bahwa kualitas premium, ketenangan sejati, dan investasi cerdas dapat diraih dalam satu keputusan. Inilah panggung di mana Anda merayakan kesuksesan hari ini dan membangun warisan untuk esok.
                 </p>
             </div>
         </section>
 
-        <!-- BAGIAN DESAIN -->
+        <!-- BAGIAN DESAIN (DENGAN KOREKSI GAMBAR) -->
         <section id="project-design" class="py-20 bg-light-gold">
             <div class="container mx-auto px-6">
                 <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Arsitektur yang Menenangkan Jiwa</h2>
-                    <p class="text-gray-600 mb-12 readable-text">Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-id="Arsitektur yang Menenangkan Jiwa" data-lang-en="Architecture that Soothes the Soul">Arsitektur yang Menenangkan Jiwa</h2>
+                    <p class="text-gray-600 mb-12 readable-text" data-lang-id="Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal." data-lang-en="Every detail is designed to provide maximum visual and functional comfort.">Setiap detail dirancang untuk memberikan kenyamanan visual dan fungsional yang maksimal.</p>
                 </div>
                 <div class="flex justify-center border-b border-gray-300 mb-10">
-                    <button data-tab="fasad" class="tab-button active-tab py-4 px-8 text-lg font-semibold border-b-4">Fasad yang Ikonik</button>
-                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-navy-blue border-b-4 border-transparent">Denah yang Fungsional</button>
+                    <button data-tab="fasad" class="tab-button active-tab py-4 px-8 text-lg font-semibold border-b-4" data-lang-id="Fasad yang Ikonik" data-lang-en="Iconic Facade">Fasad yang Ikonik</button>
+                    <button data-tab="denah" class="tab-button py-4 px-8 text-lg font-semibold text-gray-500 hover:text-navy-blue border-b-4 border-transparent" data-lang-id="Denah yang Fungsional" data-lang-en="Functional Layout">Denah yang Fungsional</button>
                 </div>
                 <div>
+                    <!-- KONTEN FASAD (BENAR) -->
                     <div id="fasad" class="tab-content">
                         <div class="grid md:grid-cols-2 gap-10 items-center">
                             <div class="text-center">
                                 <img src="images/Tampak Lt1.png" alt="Fasad Graha Harmonia 1 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
-                                <h4 class="font-semibold text-xl mt-4">Desain 1 Lantai</h4>
-                                <p class="text-gray-600 readable-text">Keanggunan yang menyatu dengan alam sekitar.</p>
+                                <h4 class="font-semibold text-xl mt-4" data-lang-id="Desain 1 Lantai" data-lang-en="1-Story Design">Desain 1 Lantai</h4>
+                                <p class="text-gray-600 readable-text" data-lang-id="Keanggunan yang menyatu dengan alam sekitar." data-lang-en="Elegance that blends with the natural surroundings.">Keanggunan yang menyatu dengan alam sekitar.</p>
                             </div>
                             <div class="text-center">
                                 <img src="images/Tampak Lt2.png" alt="Fasad Graha Harmonia 2 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
-                                <h4 class="font-semibold text-xl mt-4">Desain 2 Lantai</h4>
-                                <p class="text-gray-600 readable-text">Kenyamanan vertikal untuk keluarga yang dinamis.</p>
+                                <h4 class="font-semibold text-xl mt-4" data-lang-id="Desain 2 Lantai" data-lang-en="2-Story Design">Desain 2 Lantai</h4>
+                                <p class="text-gray-600 readable-text" data-lang-id="Kenyamanan vertikal untuk keluarga yang dinamis." data-lang-en="Vertical comfort for a dynamic family.">Kenyamanan vertikal untuk keluarga yang dinamis.</p>
                             </div>
                         </div>
                     </div>
+                    <!-- KONTEN DENAH (BENAR) -->
                     <div id="denah" class="tab-content hidden">
                          <div class="grid md:grid-cols-2 gap-10 items-center">
                             <div class="text-center">
                                 <img src="images/Denah tipe unit.jpeg" alt="Denah Tipe Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
-                                <h4 class="font-semibold text-xl mt-4">Denah Tipe Unit</h4>
-                                <p class="text-gray-600 readable-text">Tata ruang cerdas untuk kehidupan berkualitas.</p>
+                                <h4 class="font-semibold text-xl mt-4" data-lang-id="Denah Tipe Unit" data-lang-en="Unit Layout">Denah Tipe Unit</h4>
+                                <p class="text-gray-600 readable-text" data-lang-id="Tata ruang cerdas untuk kehidupan berkualitas." data-lang-en="Smart spatial planning for a quality life.">Tata ruang cerdas untuk kehidupan berkualitas.</p>
                             </div>
                             <div class="text-center">
                                 <img src="images/Siteplan GrahaHarmonia.png" alt="Site Plan Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
-                                <h4 class="font-semibold text-xl mt-4">Master Plan</h4>
-                                <p class="text-gray-600 readable-text">Lingkungan terencana untuk komunitas yang nyaman.</p>
+                                <h4 class="font-semibold text-xl mt-4" data-lang-id="Master Plan" data-lang-en="Master Plan">Master Plan</h4>
+                                <p class="text-gray-600 readable-text" data-lang-id="Lingkungan terencana untuk komunitas yang nyaman." data-lang-en="A planned environment for a comfortable community.">Lingkungan terencana untuk komunitas yang nyaman.</p>
                             </div>
                         </div>
                     </div>
@@ -117,26 +129,26 @@
             </div>
         </section>
         
-        <!-- === SEKSI BARU: KONSULTASI === -->
+        <!-- === SEKSI KONSULTASI === -->
         <section id="consultation" class="py-20 bg-navy-blue text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Masih Ada Pertanyaan?</h2>
-                <p class="text-gray-300 mb-12 text-lg max-w-3xl mx-auto readable-text">Kami mengerti bahwa ini adalah keputusan besar. Tim konsultan properti kami siap menjawab setiap pertanyaan Anda, tanpa komitmen apa pun. Pilih cara yang paling nyaman bagi Anda.</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-lang-id="Masih Ada Pertanyaan?" data-lang-en="Still Have Questions?">Masih Ada Pertanyaan?</h2>
+                <p class="text-gray-300 mb-12 text-lg max-w-3xl mx-auto readable-text" data-lang-id="Kami mengerti bahwa ini adalah keputusan besar. Tim konsultan properti kami siap menjawab setiap pertanyaan Anda, tanpa komitmen apa pun. Pilih cara yang paling nyaman bagi Anda." data-lang-en="We understand this is a big decision. Our property consultant team is ready to answer all your questions, without any commitment. Choose the most convenient way for you.">Kami mengerti bahwa ini adalah keputusan besar. Tim konsultan properti kami siap menjawab setiap pertanyaan Anda, tanpa komitmen apa pun. Pilih cara yang paling nyaman bagi Anda.</p>
                 <div class="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
                     <!-- Tombol WhatsApp -->
                     <a href="https://wa.me/6285711880101?text=Halo,%20saya%20tertarik%20dengan%20Graha%20Harmonia%20dan%20ingin%20berkonsultasi." target="_blank" class="btn-secondary font-bold py-4 px-6 rounded-full text-lg transition duration-300 flex items-center justify-center">
                         <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.512 1.725 6.286l-.935 3.424 3.471-1.011z"/></svg>
-                        Chat WhatsApp
+                        <span data-lang-id="Chat WhatsApp" data-lang-en="Chat on WhatsApp">Chat WhatsApp</span>
                     </a>
                     <!-- Tombol Email -->
                     <a href="mailto:asanagrahanusantara@gmail.com?subject=Konsultasi%20Mengenai%20Graha%20Harmonia" class="btn-secondary font-bold py-4 px-6 rounded-full text-lg transition duration-300 flex items-center justify-center">
                         <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
-                        Kirim Email
+                        <span data-lang-id="Kirim Email" data-lang-en="Send Email">Kirim Email</span>
                     </a>
                     <!-- Tombol Telepon -->
                     <a href="tel:+6285711880101" class="btn-secondary font-bold py-4 px-6 rounded-full text-lg transition duration-300 flex items-center justify-center">
                         <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                        Telepon Langsung
+                        <span data-lang-id="Telepon Langsung" data-lang-en="Call Directly">Telepon Langsung</span>
                     </a>
                 </div>
             </div>
@@ -146,33 +158,33 @@
         <section id="form-pemesanan" class="py-20">
             <div class="container mx-auto px-6">
                  <div class="max-w-4xl mx-auto text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Ambil Langkah Pertama Anda, Tanpa Risiko.</h2>
-                    <p class="text-lg text-gray-600 mt-4 leading-relaxed readable-text">Bagi Anda yang sudah yakin, mengambil Nomor Urut Pemesanan (NUP) adalah langkah strategis untuk mengamankan privilese yang tidak dimiliki orang lain. Ini adalah komitmen tanpa risiko (100% refundable) menuju keputusan terbaik dalam hidup Anda.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold" data-lang-id="Ambil Langkah Pertama Anda, Tanpa Risiko." data-lang-en="Take Your First Step, Risk-Free.">Ambil Langkah Pertama Anda, Tanpa Risiko.</h2>
+                    <p class="text-lg text-gray-600 mt-4 leading-relaxed readable-text" data-lang-id="Bagi Anda yang sudah yakin, mengambil Nomor Urut Pemesanan (NUP) adalah langkah strategis untuk mengamankan privilese yang tidak dimiliki orang lain. Ini adalah komitmen tanpa risiko (100% refundable) menuju keputusan terbaik dalam hidup Anda." data-lang-en="For those who are convinced, securing a Priority Booking Number (NUP) is a strategic move to secure privileges others don't have. It's a risk-free commitment (100% refundable) towards the best decision of your life.">Bagi Anda yang sudah yakin, mengambil Nomor Urut Pemesanan (NUP) adalah langkah strategis untuk mengamankan privilese yang tidak dimiliki orang lain. Ini adalah komitmen tanpa risiko (100% refundable) menuju keputusan terbaik dalam hidup Anda.</p>
                 </div>
                 <div class="grid lg:grid-cols-5 gap-10 items-center">
                     <!-- Keuntungan NUP -->
                     <div class="lg:col-span-2 space-y-8">
                         <div>
-                            <h3 class="text-2xl font-bold mb-2">Privilese Memilih Pertama</h3>
-                            <p class="text-gray-600 readable-text">Unit dengan posisi terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum pasar tahu.</p>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-id="Privilese Memilih Pertama" data-lang-en="The Privilege of First Choice">Privilese Memilih Pertama</h3>
+                            <p class="text-gray-600 readable-text" data-lang-id="Unit dengan posisi terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum pasar tahu." data-lang-en="The best-positioned units are the most valuable assets. An NUP is your privilege to claim it before the market even knows.">Unit dengan posisi terbaik adalah aset paling berharga. NUP adalah hak istimewa Anda untuk mengklaimnya sebelum pasar tahu.</p>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold mb-2">Mengunci Nilai Investasi</h3>
-                            <p class="text-gray-600 readable-text">Harga perdana ini adalah titik terendah yang pernah ada. Dengan NUP, Anda mengunci keuntungan masa depan, hari ini.</p>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-id="Mengunci Nilai Investasi" data-lang-en="Lock in Investment Value">Mengunci Nilai Investasi</h3>
+                            <p class="text-gray-600 readable-text" data-lang-id="Harga perdana ini adalah titik terendah yang pernah ada. Dengan NUP, Anda mengunci keuntungan masa depan, hari ini." data-lang-en="This initial price is the lowest it will ever be. With an NUP, you lock in future profits, today.">Harga perdana ini adalah titik terendah yang pernah ada. Dengan NUP, Anda mengunci keuntungan masa depan, hari ini.</p>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-bold mb-2">Bergabung dalam Lingkaran Visioner</h3>
-                            <p class="text-gray-600 readable-text">Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas.</p>
+                            <h3 class="text-2xl font-bold mb-2" data-lang-id="Bergabung dalam Lingkaran Visioner" data-lang-en="Join the Visionary Circle">Bergabung dalam Lingkaran Visioner</h3>
+                            <p class="text-gray-600 readable-text" data-lang-id="Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas." data-lang-en="Having an NUP is a statement. You are joining an exclusive circle that sees opportunities and acts intelligently.">Memiliki NUP adalah sebuah pernyataan. Anda bergabung dalam lingkaran eksklusif yang melihat peluang dan bertindak dengan cerdas.</p>
                         </div>
                     </div>
                     <!-- Form NUP -->
                     <div class="lg:col-span-3 bg-white p-8 md:p-12 rounded-3xl shadow-2xl border-t-8 border-gold">
-                        <h3 class="text-2xl font-bold text-center mb-6">Formulir NUP Prioritas</h3>
+                        <h3 class="text-2xl font-bold text-center mb-6" data-lang-id="Formulir NUP Prioritas" data-lang-en="Priority NUP Form">Formulir NUP Prioritas</h3>
                         <form id="nupForm" action="https://formspree.io/f/mnnbpaoa" method="POST">
-                            <div class="mb-6"><label for="fullName" class="block text-gray-700 text-sm font-bold mb-2">Nama Lengkap</label><input type="text" id="fullName" name="Nama Lengkap" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Nama Anda" required></div>
-                            <div class="mb-6"><label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Nomor WhatsApp</label><input type="tel" id="whatsapp" name="Nomor WhatsApp" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="0812..." required></div>
-                            <div class="mb-8"><label for="email" class="block text-gray-700 text-sm font-bold mb-2">Alamat Email</label><input type="email" id="email" name="Email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="email@anda.com" required></div>
-                            <div class="text-center"><button type="submit" id="submitButton" class="w-full btn-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg">Klaim Privilese Saya</button></div>
+                            <div class="mb-6"><label for="fullName" class="block text-gray-700 text-sm font-bold mb-2" data-lang-id="Nama Lengkap" data-lang-en="Full Name">Nama Lengkap</label><input type="text" id="fullName" name="Nama Lengkap" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Nama Anda" required></div>
+                            <div class="mb-6"><label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2" data-lang-id="Nomor WhatsApp" data-lang-en="WhatsApp Number">Nomor WhatsApp</label><input type="tel" id="whatsapp" name="Nomor WhatsApp" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="0812..." required></div>
+                            <div class="mb-8"><label for="email" class="block text-gray-700 text-sm font-bold mb-2" data-lang-id="Alamat Email" data-lang-en="Email Address">Alamat Email</label><input type="email" id="email" name="Email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-gold" placeholder="email@anda.com" required></div>
+                            <div class="text-center"><button type="submit" id="submitButton" class="w-full btn-primary font-bold py-4 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-lg" data-lang-id="Klaim Privilese Saya" data-lang-en="Claim My Privilege">Klaim Privilese Saya</button></div>
                         </form>
                     </div>
                 </div>
@@ -180,37 +192,38 @@
         </section>
     </main>
 
-   <!-- FOOTER (DENGAN PENAMBAHAN LOGO) -->
-<footer class="bg-navy-blue text-white mt-24">
-    <div class="container mx-auto px-6 py-12 text-center">
-        <img src="images/Logo asana 1.png" alt="Logo Asana Graha Nusantara" class="h-8 mx-auto mb-6 opacity-90">
-        <p class="text-gold">&copy; 2025 PT. Asana Graha Nusantara</p>
-        <p class="text-sm text-gray-300 mt-2 readable-text">Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali</p>
-    </div>
-</footer>
+    <!-- FOOTER (DENGAN PENAMBAHAN LOGO) -->
+    <footer class="bg-navy-blue text-white mt-24">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" class="h-12 mx-auto mb-6">
+            <p class="text-white">&copy; 2025 PT. Asana Graha Nusantara</p>
+            <p class="text-sm text-gray-300 mt-2 readable-text" data-lang-id="Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali" data-lang-en="Creating Spaces for a Harmonious Life in Tabanan City, Bali">Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali</p>
+        </div>
+    </footer>
+
     <!-- MODAL POP-UP -->
     <div id="thankYouModal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 opacity-0 pointer-events-none">
         <div class="modal-content modal-scrollable bg-white max-w-2xl w-full p-8 md:p-10 rounded-2xl shadow-2xl text-center border-t-8 border-gold transform scale-95 opacity-0">
             <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" class="h-10 mx-auto mb-6">
             <div class="mx-auto bg-green-100 rounded-full h-20 w-20 flex items-center justify-center mb-5"><svg class="h-12 w-12 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg></div>
-            <h1 class="text-3xl font-bold mb-3">Terima Kasih!</h1>
-            <p class="text-gray-600 mb-8 text-lg readable-text">Anda selangkah lebih dekat. Segera amankan posisi prioritas Anda.</p>
+            <h1 class="text-3xl font-bold mb-3" data-lang-id="Terima Kasih!" data-lang-en="Thank You!">Terima Kasih!</h1>
+            <p class="text-gray-600 mb-8 text-lg readable-text" data-lang-id="Anda selangkah lebih dekat. Segera amankan posisi prioritas Anda." data-lang-en="You are one step closer. Secure your priority position immediately.">Anda selangkah lebih dekat. Segera amankan posisi prioritas Anda.</p>
             <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 text-left mb-8">
-                <h2 class="text-xl font-bold mb-4">Langkah Berikutnya: Pembayaran NUP</h2>
-                <p class="text-gray-600 mb-6 readable-text">Silakan lakukan pembayaran Booking Fee NUP sebesar <strong>Rp 5.000.000,-</strong> ke rekening resmi kami:</p>
+                <h2 class="text-xl font-bold mb-4" data-lang-id="Langkah Berikutnya: Pembayaran NUP" data-lang-en="Next Step: NUP Payment">Langkah Berikutnya: Pembayaran NUP</h2>
+                <p class="text-gray-600 mb-6 readable-text" data-lang-id="Silakan lakukan pembayaran Booking Fee NUP sebesar <strong>Rp 5.000.000,-</strong> ke rekening resmi kami:" data-lang-en="Please make a NUP Booking Fee payment of <strong>IDR 5,000,000</strong> to our official account:">Silakan lakukan pembayaran Booking Fee NUP sebesar <strong>Rp 5.000.000,-</strong> ke rekening resmi kami:</p>
                 <div class="space-y-3 text-sm">
-                    <div class="flex justify-between"><span class="text-gray-500">Bank:</span><span class="font-semibold">Bank Mandiri</span></div>
-                    <div class="flex justify-between"><span class="text-gray-500">Atas Nama:</span><span class="font-semibold">PT Asana Graha Nusantara</span></div>
-                    <div class="flex justify-between items-center"><span class="text-gray-500">No. Rekening:</span><span id="accountNumber" class="font-bold text-lg tracking-wider">1750004137419</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500" data-lang-id="Bank:" data-lang-en="Bank:">Bank:</span><span class="font-semibold">Bank Mandiri</span></div>
+                    <div class="flex justify-between"><span class="text-gray-500" data-lang-id="Atas Nama:" data-lang-en="Account Name:">Atas Nama:</span><span class="font-semibold">PT Asana Graha Nusantara</span></div>
+                    <div class="flex justify-between items-center"><span class="text-gray-500" data-lang-id="No. Rekening:" data-lang-en="Account No.:">No. Rekening:</span><span id="accountNumber" class="font-bold text-lg tracking-wider">1750004137419</span></div>
                 </div>
-                <button id="copyButton" class="mt-6 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-4 rounded-lg text-sm transition duration-300">Salin Nomor Rekening</button>
+                <button id="copyButton" class="mt-6 w-full bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-3 px-4 rounded-lg text-sm transition duration-300" data-lang-id="Salin Nomor Rekening" data-lang-en="Copy Account Number">Salin Nomor Rekening</button>
             </div>
             <div class="text-left bg-blue-50 border-l-4 border-blue-400 p-4 rounded-md mb-8">
-                <h3 class="font-bold text-blue-800">Penting: Konfirmasi Pembayaran</h3>
-                <p class="text-sm text-blue-700 mt-1 readable-text">Setelah transfer, mohon kirimkan bukti pembayaran melalui WhatsApp agar NUP Anda dapat segera kami proses.</p>
-                 <a href="https://wa.me/6285711880101?text=Halo,%20saya%20telah%20mendaftar%20NUP%20Graha%20Harmonia%20dan%20ingin%20mengonfirmasi%20pembayaran." target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full text-sm">Konfirmasi via WhatsApp</a>
+                <h3 class="font-bold text-blue-800" data-lang-id="Penting: Konfirmasi Pembayaran" data-lang-en="Important: Payment Confirmation">Penting: Konfirmasi Pembayaran</h3>
+                <p class="text-sm text-blue-700 mt-1 readable-text" data-lang-id="Setelah transfer, mohon kirimkan bukti pembayaran melalui WhatsApp agar NUP Anda dapat segera kami proses." data-lang-en="After transferring, please send the proof of payment via WhatsApp so we can process your NUP immediately.">Setelah transfer, mohon kirimkan bukti pembayaran melalui WhatsApp agar NUP Anda dapat segera kami proses.</p>
+                 <a href="https://wa.me/6285711880101?text=Halo,%20saya%20telah%20mendaftar%20NUP%20Graha%20Harmonia%20dan%20ingin%20mengonfirmasi%20pembayaran." target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-5 rounded-full text-sm" data-lang-id="Konfirmasi via WhatsApp" data-lang-en="Confirm via WhatsApp">Konfirmasi via WhatsApp</a>
             </div>
-            <button id="closeModalButton" class="text-gray-500 hover:text-navy-blue font-semibold">Tutup</button>
+            <button id="closeModalButton" class="text-gray-500 hover:text-navy-blue font-semibold" data-lang-id="Tutup" data-lang-en="Close">Tutup</button>
         </div>
     </div>
 
@@ -281,9 +294,13 @@
         const copyButton = document.getElementById('copyButton');
         const accountNumber = document.getElementById('accountNumber');
         copyButton.addEventListener('click', () => {
+            const currentLang = localStorage.getItem('preferredLanguage') || 'id';
+            const successText = currentLang === 'id' ? 'Berhasil Disalin!' : 'Copied successfully!';
+            const defaultText = currentLang === 'id' ? 'Salin Nomor Rekening' : 'Copy Account Number';
+
             navigator.clipboard.writeText(accountNumber.textContent).then(() => {
-                copyButton.textContent = 'Berhasil Disalin!';
-                setTimeout(() => { copyButton.textContent = 'Salin Nomor Rekening'; }, 2000);
+                copyButton.textContent = successText;
+                setTimeout(() => { copyButton.textContent = defaultText; }, 2000);
             }).catch(err => console.error('Gagal menyalin', err));
         });
 
@@ -309,6 +326,42 @@
                     }
                 });
             });
+        });
+
+        // --- SCRIPT UNTUK BAHASA ---
+        const langButtons = {
+            en: document.getElementById('lang-en'),
+            id: document.getElementById('lang-id')
+        };
+        const translatableElements = document.querySelectorAll('[data-lang-id]');
+
+        const setLanguage = (lang) => {
+            translatableElements.forEach(el => {
+                if (el.dataset[lang]) {
+                    el.innerHTML = el.dataset[lang];
+                }
+            });
+            localStorage.setItem('preferredLanguage', lang);
+            
+            if (lang === 'en') {
+                langButtons.en.classList.add('active-lang', 'text-white');
+                langButtons.en.classList.remove('text-gray-300');
+                langButtons.id.classList.remove('active-lang', 'text-white');
+                langButtons.id.classList.add('text-gray-300');
+            } else {
+                langButtons.id.classList.add('active-lang', 'text-white');
+                langButtons.id.classList.remove('text-gray-300');
+                langButtons.en.classList.remove('active-lang', 'text-white');
+                langButtons.en.classList.add('text-gray-300');
+            }
+        };
+
+        langButtons.en.addEventListener('click', () => setLanguage('en'));
+        langButtons.id.addEventListener('click', () => setLanguage('id'));
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'id';
+            setLanguage(savedLang);
         });
 
     </script>
