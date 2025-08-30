@@ -104,7 +104,7 @@
                                 <p class="text-gray-600 readable-text" data-lang-id="Keanggunan yang menyatu dengan alam sekitar." data-lang-en="Elegance that blends with the natural surroundings.">Keanggunan yang menyatu dengan alam sekitar.</p>
                             </div>
                             <div class="text-center">
-                                <img src="images/Siteplan GrahaHarmonia.png" alt="Fasad Graha Harmonia 2 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
+                                <img src="images/Tampak Lt2.png" alt="Fasad Graha Harmonia 2 Lantai" class="rounded-2xl shadow-2xl w-full h-auto mb-4 transform hover:scale-105 transition-transform duration-500">
                                 <h4 class="font-semibold text-xl mt-4" data-lang-id="Desain 2 Lantai" data-lang-en="2-Story Design">Desain 2 Lantai</h4>
                                 <p class="text-gray-600 readable-text" data-lang-id="Kenyamanan vertikal untuk keluarga yang dinamis." data-lang-en="Vertical comfort for a dynamic family.">Kenyamanan vertikal untuk keluarga yang dinamis.</p>
                             </div>
@@ -114,12 +114,12 @@
                     <div id="denah" class="tab-content hidden">
                          <div class="grid md:grid-cols-2 gap-10 items-center">
                             <div class="text-center">
-                                <img src="images/Tampak Lt1.png" alt="Denah Tipe Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
+                                <img src="images/Siteplan GrahaHarmonia.png" alt="Denah Tipe Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
                                 <h4 class="font-semibold text-xl mt-4" data-lang-id="Denah Tipe Unit" data-lang-en="Unit Layout">Denah Tipe Unit</h4>
                                 <p class="text-gray-600 readable-text" data-lang-id="Tata ruang cerdas untuk kehidupan berkualitas." data-lang-en="Smart spatial planning for a quality life.">Tata ruang cerdas untuk kehidupan berkualitas.</p>
                             </div>
                             <div class="text-center">
-                                <img src="images/Tampak Lt2.png" alt="Site Plan Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
+                                <img src="images/Tampak Lt1.png" alt="Site Plan Graha Harmonia" class="rounded-2xl shadow-2xl w-full h-auto mb-4 border-4 border-white">
                                 <h4 class="font-semibold text-xl mt-4" data-lang-id="Master Plan" data-lang-en="Master Plan">Master Plan</h4>
                                 <p class="text-gray-600 readable-text" data-lang-id="Lingkungan terencana untuk komunitas yang nyaman." data-lang-en="A planned environment for a comfortable community.">Lingkungan terencana untuk komunitas yang nyaman.</p>
                             </div>
@@ -238,7 +238,8 @@
         async function handleSubmit(event) {
             event.preventDefault();
             const originalButtonText = submitButton.innerHTML;
-            submitButton.innerHTML = 'Mengirim...';
+            const currentLang = localStorage.getItem('preferredLanguage') || 'id';
+            submitButton.innerHTML = currentLang === 'id' ? 'Mengirim...' : 'Sending...';
             submitButton.disabled = true;
 
             const data = new FormData(event.target);
@@ -328,7 +329,7 @@
             });
         });
 
-        // --- SCRIPT UNTUK BAHASA ---
+        // --- SCRIPT UNTUK BAHASA (DENGAN PERBAIKAN) ---
         const langButtons = {
             en: document.getElementById('lang-en'),
             id: document.getElementById('lang-id')
@@ -336,9 +337,11 @@
         const translatableElements = document.querySelectorAll('[data-lang-id]');
 
         const setLanguage = (lang) => {
+            const langAttr = `lang${lang.charAt(0).toUpperCase() + lang.slice(1)}`; // langId atau langEn
             translatableElements.forEach(el => {
-                if (el.dataset[lang]) {
-                    el.innerHTML = el.dataset[lang];
+                const translation = el.dataset[langAttr];
+                if (translation) {
+                    el.innerHTML = translation;
                 }
             });
             localStorage.setItem('preferredLanguage', lang);
