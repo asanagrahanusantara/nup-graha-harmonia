@@ -53,24 +53,51 @@
 </head>
 <body class="antialiased">
 
-    <!-- BAGIAN HEADER (DENGAN PERBAIKAN RESPONSIVE FINAL) -->
-    <header class="hero-bg text-white relative">
-        <!-- TOMBOL BAHASA -->
-        <div class="absolute top-4 right-4 md:top-6 md:right-8 z-10">
-            <button id="lang-id" class="lang-btn px-2 py-1 text-sm text-white font-semibold">ID</button>
-            <span class="text-white opacity-50">|</span>
-            <button id="lang-en" class="lang-btn px-2 py-1 text-sm text-gray-300 font-semibold">EN</button>
-        </div>
+   <!-- BAGIAN HEADER (RESPONSIVE FINAL REVISI) -->
+<header class="relative bg-cover bg-center min-h-screen flex items-center justify-center text-white hero-bg" 
+        style="background-image: url('images/bg-villa.jpg');">
+    
+    <!-- Overlay gelap agar teks terbaca -->
+    <div class="absolute inset-0 bg-black/40"></div>
 
-        <div class="container mx-auto px-6 py-24 md:py-40 text-center flex flex-col items-center">
-            <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" class="h-16 md:h-20 mx-auto mb-8">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-lang-id="Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR." data-lang-en="Imagine Owning a Villa in Bali, with a Mortgage Equal to the Minimum Wage.">Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR.</h1>
-            <p class="text-base md:text-lg lg:text-xl text-gray-200 mb-12 max-w-3xl readable-text" data-lang-id="Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan." data-lang-en="At Graha Harmonia, we break the boundaries. We believe that the luxury, tranquility, and prestige of a villa are not exclusive rights, but a smart dream that you can now realize.">Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan.</p>
-            <a href="#consultation" class="btn-primary font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-base md:text-lg transition duration-300 transform hover:scale-105 shadow-xl" data-lang-id="Wujudkan Impian Anda" data-lang-en="Realize Your Dream">
-                Wujudkan Impian Anda
-            </a>
-        </div>
-    </header>
+    <!-- Tombol Bahasa -->
+    <div class="absolute top-4 right-4 md:top-6 md:right-8 z-20 flex items-center space-x-2">
+        <button id="lang-id" class="px-2 py-1 text-sm font-semibold text-white hover:text-yellow-400 transition">ID</button>
+        <span class="text-white opacity-50">|</span>
+        <button id="lang-en" class="px-2 py-1 text-sm font-semibold text-gray-300 hover:text-yellow-400 transition">EN</button>
+    </div>
+
+    <!-- Konten Hero -->
+    <div class="relative z-10 container mx-auto px-6 py-20 sm:py-28 md:py-40 text-center flex flex-col items-center">
+        
+        <!-- Logo -->
+        <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" 
+             class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto mx-auto mb-6">
+
+        <!-- Headline -->
+        <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-snug mb-4 max-w-4xl"
+            data-lang-id="Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR."
+            data-lang-en="Imagine Owning a Villa in Bali, with a Mortgage Equal to the Minimum Wage.">
+            Bayangkan Memiliki Villa di Bali, dengan Cicilan Setara UMR.
+        </h1>
+
+        <!-- Sub-Text -->
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-10 max-w-3xl readable-text"
+            data-lang-id="Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan."
+            data-lang-en="At Graha Harmonia, we break the boundaries. We believe that the luxury, tranquility, and prestige of a villa are not exclusive rights, but a smart dream that you can now realize.">
+            Di Graha Harmonia, kami mendobrak batasan. Kami percaya bahwa kemewahan, ketenangan, dan prestise sebuah villa bukanlah hak eksklusif, melainkan sebuah impian cerdas yang kini dapat Anda wujudkan.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#consultation" 
+           class="bg-yellow-400 hover:bg-yellow-500 text-navy-blue font-bold py-3 px-8 md:py-4 md:px-10 rounded-full text-sm sm:text-base md:text-lg transition transform hover:scale-105 shadow-xl"
+           data-lang-id="Wujudkan Impian Anda"
+           data-lang-en="Realize Your Dream">
+            Wujudkan Impian Anda
+        </a>
+    </div>
+</header>
+
 
     <main>
         <!-- BAGIAN FILOSOFI -->
@@ -191,15 +218,30 @@
             </div>
         </section>
     </main>
+<!-- FOOTER (DENGAN PENAMBAHAN LOGO) -->
+<footer class="bg-navy-blue text-white mt-24">
+  <div class="container mx-auto px-6 py-12">
+    <div class="flex items-center space-x-6">
+      <!-- Logo lebih besar -->
+      <img src="images/ASANA logo.png" 
+           alt="Logo Asana Graha Nusantara" 
+           class="h-16 md:h-20 w-auto">
 
-    <!-- FOOTER (DENGAN PENAMBAHAN LOGO) -->
-    <footer class="bg-navy-blue text-white mt-24">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <img src="images/ASANA logo.png" alt="Logo Asana Graha Nusantara" class="h-12 mx-auto mb-6">
-            <p class="text-white">&copy; 2025 PT. Asana Graha Nusantara</p>
-            <p class="text-sm text-gray-300 mt-2 readable-text" data-lang-id="Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali" data-lang-en="Creating Spaces for a Harmonious Life in Tabanan City, Bali">Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali</p>
-        </div>
-    </footer>
+      <!-- Teks Footer -->
+      <div>
+        <p class="text-yellow-400 text-base md:text-lg font-semibold">
+          &copy; 2025 PT. Asana Graha Nusantara
+        </p>
+        <p class="text-sm md:text-base text-gray-300 mt-1 readable-text"
+           data-lang-id="Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali" 
+           data-lang-en="Creating Spaces for a Harmonious Life in Tabanan City, Bali">
+           Menciptakan Ruang untuk Kehidupan Harmonis di Kota Tabanan, Bali
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
     <!-- MODAL POP-UP -->
     <div id="thankYouModal" class="modal-backdrop fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 opacity-0 pointer-events-none">
